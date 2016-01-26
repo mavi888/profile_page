@@ -1,63 +1,85 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+
     <title>Marcia Villalba</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body>
-    <nav>
-      <a href="#greetings">Greetings</a> |
-      <a href="#about-me">About Me</a> |
-      <a href="#photos">Photos</a> |
-      <a href="#links">Links</a> |
-      <a href="#contact-me">Contact Me</a>
-    </nav>
-    <section id="greetings">
-      <h1>Greetings visitors</h1>
-      <script language="javascript">
-      var who = window.prompt("What is your name?");
-      document.write("<p>Welcome " + who + " to my profile page</p>");
-      </script>
-      <p>I hope you enjoy the site</p>
-    </section>
-    <section id="about-me">
-      <h1>About Me</h1>
-      <p>I am Marcia Villalba, a software engineer from Uruguay, living in Helsinki. I am almost 30 years old and I have been working over 10 years in the IT industry. I am part of the 1% of hispanic women in computer science, a minority in the minorities.</p>
-      <h2>Some facts...</h2>
-      <ul>
-        <li><b>Favorite animal:</b> Cats</li>
-        <li><b>Best food in the world:</b> The perfect hamburger</li>
-        <li><b>Learning to:</b> Ice skate</li>
-      </ul>
-    </section>
-    <section id="photos">
-      <h1>Photos</h1>
-    </section>
-    <section id="links">
-      <h1>My favorite links</h1>
-      <ul style="list-style-type:none">
-        <li>
-          <a href="http://marciavillalba.com">
-            <img src="img/link-1.png" alt="marcia villalba web site" height="250" width="250">
-          </a>
-        </li>
-        <li>
-          <a href="http://girlsintech.org/">
-            <img src="img/link-2.png" alt="girls in tech web site" height="250" width="250">
-          </a>
-        </li>
-        <li>
-          <a href="http://www.w3schools.com/">
-            <img src="img/link-3.png" alt="w3schools web page" height="250" width="250">
-          </a>
-        </li>
-        <li>
-          <a href="http://www.bbc.com/">
-            <img src="img/link-4.png" alt="bbc web page" height="250" width="250">
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section id="contact-me">
-      <h1>Contact me</h1>
-    </section>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li><a href="#greetings">Greetings</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
+      <section id="greetings" class="jumbotron">
+        <h1>Greetings <script language="javascript">
+        var who = window.prompt("What is your name?");
+        document.write(who);
+        </script>
+        </h1>
+        <p> Welcome to my profile page. </br>
+        I hope you enjoy the site</p>
+      </section>
+      <section id="about-me">
+        <h1>About Me</h1>
+        <div class="row">
+          <div class="col-md-8">
+            <p>I am Marcia Villalba, a software engineer from Uruguay, living in Helsinki. I am almost 30 years old and I have been working over 10 years in the IT industry. I am part of the 1% of hispanic women in computer science, a minority in the minorities.</p>
+            <h2>Some facts...</h2>
+            <ul>
+              <li><b>Favorite animal:</b> Cats</li>
+              <li><b>Best food in the world:</b> The perfect hamburger</li>
+              <li><b>Learning to:</b> Ice skate</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive" src="img/marcia.jpg" alt="Marcia profile picture">
+          </div>
+        </div>
+      </section>
+      <section id="photos">
+        <h1>Photos</h1>
+      </section>
+      <section id="links">
+        <h1>My favorite links</h1>
+        <div class="row">
+          <div class="col-md-3">
+            <a href="http://marciavillalba.com" class="thumbnail">
+              <img src="img/link-1.png" alt="marcia villalba web site" height="250" width="250">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://girlsintech.org/" class="thumbnail">
+              <img src="img/link-2.png" alt="girls in tech web site" height="250" width="250">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://www.w3schools.com/" class="thumbnail">
+              <img src="img/link-3.png" alt="w3schools web page" height="250" width="250">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://www.bbc.com/" class="thumbnail">
+              <img src="img/link-4.png" alt="bbc web page" height="250" width="250">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact-me">
+        <h1>Contact me</h1>
+      </section>
+    </div>
   </body>
 </html>
